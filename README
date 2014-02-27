@@ -1,7 +1,6 @@
-Spin Up - Centos 6.4
-================================
+# Spin Up - Centos 6.4
 
-Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters que se utilizan en Wikot, además de herramientas de configuración para los servicios.
+Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters (Con Centos 6.4) que se utilizan en Wikot, además de herramientas de configuración para los servicios. Estos script son para utilización temporal y servirán como guía para desarrollar e implementar los Recipes para el proyecto de DevOps con Chef.
 
 El stack comprende:
 
@@ -12,12 +11,34 @@ El stack comprende:
 5. phpMyAdmin
 6. Usuario de control y usuario worker (root no tiene acceso al servidor)
 
-To Do
---------------------------------
+## To Do
 
 * Completar este Todo
+* Sacar copias de php-fpm.d para hacer template
+* Instalación de git
 * Script de Instalacion de MySQL
 * Script y servicio para instalar Deploy Keys
 * Configuración básica de nginx  para directorio base
 * Configuración básica de PHP-FPM para directorio base
 * Capacidad para que los scripts funcionen de manera independiente
+
+## Material de Apoyo
+
+### Links
+
+* https://www.digitalocean.com/community/articles/initial-server-setup-with-centos-6
+* http://www.gratisoft.us/sudo/sudoers.man.html
+* http://www.cyberciti.biz/faq/centos-hostname-change-command-line/
+* http://ibohm.blogspot.com/2012/03/how-to-fix-warning-setlocale-lcctype.html (En comentarios la solucion)
+* http://serverfault.com/questions/149673/linux-how-to-prevent-a-user-from-login-in-but-allow-su-user
+* 403 en directorio
+  * http://nginxlibrary.com/403-forbidden-error/
+  * http://www.yolinux.com/TUTORIALS/LinuxTutorialManagingGroups.html (Usar gpasswd -a nginx worker y 750)
+* 405 en nginx con archivos estáticos
+  * http://leandroardissone.com/post/19690882654/nginx-405-not-allowed
+
+### Snippets
+
+* Para generar una llave con comentario, sin passphrase y archivo específico
+```ssh-keygen -f cl.wktapp.com.deploykey -C "cluster@cl.wktapp.com" -N ""```
+

@@ -8,8 +8,8 @@ printf "\n"
 
 printf "== Parametros de Servidor\n\n"
 
-read -p "Hostname: " server_hostname
-read -p "Cluster: " cluster_hostname
+read -p "Hostname (miryam): " server_hostname
+read -p "Cluster (cl.wktapp.com): " cluster_hostname
 
 printf "\n"
 

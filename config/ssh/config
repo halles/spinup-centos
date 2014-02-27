@@ -1,0 +1,4 @@
+Compression yes
+
+Host code.wktapp.com
+  IdentityFile ~/.ssh/cl.wktapp.com.deploykey
