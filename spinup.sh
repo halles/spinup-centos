@@ -66,6 +66,11 @@ printf "** Comienza la Configuracion... Tomará un tiempo \n\n"
 yum -y upgrade
 yum update
 
+# Configuraciones Varias
+
+./scripts/locale-fix.sh
+./scripts/git.sh
+
 # Configuracion de Usuarios
 
 ./scripts/user.sh
@@ -73,12 +78,12 @@ yum update
 
 # Instalacion de nginx
 
-#./scripts/nginx.sh
+./scripts/nginx.sh
 
 # Instalacion de PHP con PHP-FPM
 
-#./scripts/php-fpm.sh
+./scripts/php-fpm.sh
 
 # Instalacion de MySQL y phpMyAdmin
 
-#./scripts/mysql.sh $mysql_root_password
+./scripts/mysql.sh $mysql_root_password

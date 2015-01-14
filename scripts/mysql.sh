@@ -1,10 +1,10 @@
 # Instalacion de MySQL
 
-yum -y install mysql mysql-server
-chkconfig --level 2345 mysqld on
-service mysqld start
+yum -y install mariadb-server mariadb
+systemctl enable mariadb.service
+systemctl start mariadb.service
 
-/usr/bin/mysqladmin -u root password 'aisoudh9aspnda9sdpjlasd'
+mysqladmin -u root password ',-/2~;I ~dN[!2b'
 
 # Instalacion de phpMyAdmin
 

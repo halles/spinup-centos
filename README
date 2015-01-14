@@ -1,15 +1,16 @@
-# Spin Up - Centos 6.4
+# Spin Up - Centos 7
 
 Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters (Con Centos 6.4) que se utilizan en Wikot, además de herramientas de configuración para los servicios. Estos script son para utilización temporal y servirán como guía para desarrollar e implementar los Recipes para el proyecto de DevOps con Chef.
 
 El stack comprende:
 
-1. Utilización de Centos 6.4
-2. Nginx 1.4
+1. Utilización de Centos 7
+2. Nginx 1.6.2
 3. PHP 5.5 desde Webtatic corriendo a través de php-fpm
-4. MySQL Server 5.1
+4. MariaDB Server 5.5
 5. phpMyAdmin
-6. Usuario de control y usuario worker (root no tiene acceso al servidor)
+6. Usuario de control ops
+7. Usuario de ejecución worker (root no tiene acceso al servidor)
 
 ## To Do
 
