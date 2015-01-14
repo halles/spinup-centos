@@ -21,6 +21,7 @@ El stack comprende:
 * Configuración básica de nginx  para directorio base
 * Configuración básica de PHP-FPM para directorio base
 * Capacidad para que los scripts funcionen de manera independiente
+* Activar Sendmail para envio de mails con php mail()
 
 ## Material de Apoyo
 
@@ -36,6 +37,7 @@ El stack comprende:
   * http://www.yolinux.com/TUTORIALS/LinuxTutorialManagingGroups.html (Usar gpasswd -a nginx worker y 750)
 * 405 en nginx con archivos estáticos
   * http://leandroardissone.com/post/19690882654/nginx-405-not-allowed
+* http://blog.starcklin.com/2013/08/centos-linode-longview-synchronize-server/
 
 ### Snippets
 
