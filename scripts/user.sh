@@ -1,3 +1,4 @@
+args=("$@")
 ssh_username=${args[0]}
 ssh_password=${args[1]}
 

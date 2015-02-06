@@ -1,3 +1,4 @@
+args=("$@")
 server_hostname=${args[0]}
 cluster_hostname=${args[1]}
 

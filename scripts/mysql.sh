@@ -1,3 +1,4 @@
+args=("$@")
 mysql_root_password=${args[0]}
 
 # Instalacion de MySQL
