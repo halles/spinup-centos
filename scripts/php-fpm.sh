@@ -22,5 +22,5 @@ yum -y install \
 
 # Registro de PHP-FPM como servicio
 
-sudo systemctl enable php-fpm.service
-sudo systemctl start php-fpm.service
+systemctl enable php-fpm.service
+systemctl start php-fpm.service

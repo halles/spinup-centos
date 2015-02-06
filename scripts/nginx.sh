@@ -5,8 +5,8 @@
 wget http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 rpm -i nginx-release-centos-7-0.el7.ngx.noarch.rpm
 yum -y install nginx
-sudo systemctl enable nginx.service
-sudo systemctl start nginx.service
+systemctl enable nginx.service
+systemctl start nginx.service
 
 # Configuración por defecto para nginx
 
@@ -27,7 +27,7 @@ done
 echo '' >> CF_IPS_FILE
 echo 'real_ip_header     CF-Connecting-IP;' >> CF_IPS_FILE
 
-sudo systemctl restart nginx.service
+systemctl restart nginx.service
 
 # Configuracion Base de Nginx
 
