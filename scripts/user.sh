@@ -1,3 +1,6 @@
+ssh_username=${args[0]}
+ssh_password=${args[1]}
+
 # Creación del Usuario de Control
 
 SSH_DIR=/home/$ssh_username/.ssh

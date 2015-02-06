@@ -34,7 +34,6 @@ printf "MySQL Root Password: $mysql_root_password\n"
 printf "\n"
 printf "SSH Username: $ssh_username\n"
 printf "SSH Password: $ssh_password\n"
-printf "SSH User Key: $ssh_userkey\n"
 printf "\n"
 
 while true; do
@@ -55,7 +54,7 @@ yum update
 # Configuraciones Varias
 
 ./scripts/locale-fix.sh
-./scripts/hostname.sh
+./scripts/hostname.sh $server_hostname $cluster_hostname
 
 # Repositorios externos
 
@@ -69,7 +68,7 @@ yum update
 
 # Configuracion de Usuarios
 
-./scripts/user.sh
+./scripts/user.sh $ssh_username $ssh_password
 ./scripts/deny-root-ssh.sh
 
 #./scripts/worker.sh
@@ -88,4 +87,4 @@ yum update
 
 # Instalacion de MySQL
 
-./scripts/mysql.sh
+./scripts/mysql.sh $mysql_root_password

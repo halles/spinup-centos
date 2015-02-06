@@ -17,15 +17,17 @@ cp config/nginx/nginx.conf /etc/nginx/nginx.conf
 CF_IPS_FILE='/etc/nginx/cloudflare_real_ip.conf'
 CF_IPS=`curl https://www.cloudflare.com/ips-v4`
 
-echo '' > CF_IPS_FILE
+echo '' > $CF_IPS_FILE
 
 for ip in $CF_IPS
 do
-	echo "set_real_ip_from   $ip;" >> CF_IPS_FILE
+	echo "set_real_ip_from   $ip;" >> $CF_IPS_FILE
 done
 
-echo '' >> CF_IPS_FILE
-echo 'real_ip_header     CF-Connecting-IP;' >> CF_IPS_FILE
+echo '' >> $CF_IPS_FILE
+echo 'real_ip_header     CF-Connecting-IP;' >> $CF_IPS_FILE
+
+# Reiniciar Servicio nginx
 
 systemctl restart nginx.service
 

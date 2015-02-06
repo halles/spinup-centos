@@ -1,3 +1,5 @@
+mysql_root_password=${args[0]}
+
 # Instalacion de MySQL
 # La instalación debe hacerse desde el repositorio de la comunidad
 # ya que CentOS 7 usa MariaDB por defecto y Longview todavía no es
