@@ -22,18 +22,8 @@ printf "\n"
 printf "== Parámetros de Usuario de Control\n\n"
 read -p "username:   " ssh_username
 read -p "password:   " ssh_password
-printf "* Si no se especifica una Ssh Key de acceso no se ingresará ninguna al momento de crear el usuario\n"
-read -p "ssh-key:    " ssh_userkey
 
 printf "\n"
-
-printf "== Parámetros de Usuario Worker\n\n"
-read -p "username:   " worker_user
-read -p "password:   " worker_user
-printf "* El Deploy token es una clave temporal para descargar las Deploy Keys con que funcionará el servidor\n"
-printf "* Si no se especifica este token, tendrá que instalar el deploy key manualmente en el usuario correpsondiente\n"
-printf "* El Token debe crearlo en http://keys.wktapp.com/\n"
-read -p "deploy-token: " worker_deploytoken
 
 printf "************************************************\n"
 printf "**         Confirmar la configuración         **\n"
@@ -45,10 +35,6 @@ printf "\n"
 printf "SSH Username: $ssh_username\n"
 printf "SSH Password: $ssh_password\n"
 printf "SSH User Key: $ssh_userkey\n"
-printf "\n"
-printf "Worker Username:   $worker_username\n"
-printf "Worker Password:   $worker_password\n"
-printf "Worker Deploy Token: $worker_deploytoken\n"
 printf "\n"
 
 while true; do
@@ -69,12 +55,28 @@ yum update
 # Configuraciones Varias
 
 ./scripts/locale-fix.sh
+./scripts/hostname.sh
+
+# Repositorios externos
+
+./scripts/epel.sh
+./scripts/webtatic.sh
+
+# Instalacion de Utils
+
 ./scripts/git.sh
+./scripts/htop.sh
 
 # Configuracion de Usuarios
 
 ./scripts/user.sh
-./scripts/worker.sh
+./scripts/deny-root-ssh.sh
+
+#./scripts/worker.sh
+
+# Setup del Firewall
+
+./scripts/firewall.sh
 
 # Instalacion de nginx
 
@@ -84,6 +86,6 @@ yum update
 
 ./scripts/php-fpm.sh
 
-# Instalacion de MySQL y phpMyAdmin
+# Instalacion de MySQL
 
-./scripts/mysql.sh $mysql_root_password
+./scripts/mysql.sh

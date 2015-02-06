@@ -7,7 +7,7 @@ El stack comprende:
 1. Utilización de Centos 7
 2. Nginx 1.6.2
 3. PHP 5.5 desde Webtatic corriendo a través de php-fpm
-4. MariaDB Server 5.5
+4. MySQL Server 5.5
 5. phpMyAdmin
 6. Usuario de control ops
 7. Usuario de ejecución worker (root no tiene acceso al servidor)
@@ -16,13 +16,16 @@ El stack comprende:
 
 * Completar este Todo
 * Sacar copias de php-fpm.d para hacer template
-* Instalación de git
-* Script de Instalacion de MySQL
 * Script y servicio para instalar Deploy Keys
-* Configuración básica de nginx  para directorio base
 * Configuración básica de PHP-FPM para directorio base
 * Capacidad para que los scripts funcionen de manera independiente
 * Activar Sendmail para envio de mails con php mail()
+* node + npm
+* ruby + gems
+* sass
+* bower
+* gulp
+* composer
 
 ## Material de Apoyo
 

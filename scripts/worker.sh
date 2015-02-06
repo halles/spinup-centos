@@ -26,3 +26,5 @@ sudo -u $worker_username chmod 750 $WORKER_DIR
 sudo -u $worker_username mkdir $WORKER_SITES/$cluster_hostname
 sudo -u $worker_username mkdir $WORKER_SITES/$cluster_hostname/www
 sudo -u $worker_username mkdir $WORKER_SITES/$cluster_hostname/logs
+sudo -u $worker_username mkdir $WORKER_SITES/$cluster_hostname/wsdlcache
+sudo -u $worker_username mkdir $WORKER_SITES/$cluster_hostname/sessions

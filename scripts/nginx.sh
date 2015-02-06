@@ -1,17 +1,33 @@
 #!/bin/bash
 
-# Instalacion de repositorio epel
-
-wget http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
-rpm -ivh epel-release-7-5.noarch.rpm
-
 # Instalacion de nginx
 
 wget http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 rpm -i nginx-release-centos-7-0.el7.ngx.noarch.rpm
 yum -y install nginx
-chkconfig --level 2345 nginx on
-service nginx start
+sudo systemctl enable nginx.service
+sudo systemctl start nginx.service
+
+# Configuración por defecto para nginx
+
+cp config/nginx/nginx.conf /etc/nginx/nginx.conf
+
+# Cloudflare para entregar IP real al servicio
+
+CF_IPS_FILE='/etc/nginx/cloudflare_real_ip.conf'
+CF_IPS=`curl https://www.cloudflare.com/ips-v4`
+
+echo '' > CF_IPS_FILE
+
+for ip in $CF_IPS
+do
+	echo "set_real_ip_from   $ip;" >> CF_IPS_FILE
+done
+
+echo '' >> CF_IPS_FILE
+echo 'real_ip_header     CF-Connecting-IP;' >> CF_IPS_FILE
+
+sudo systemctl restart nginx.service
 
 # Configuracion Base de Nginx
 

@@ -1,11 +1,13 @@
 # Instalacion de MySQL
+# La instalación debe hacerse desde el repositorio de la comunidad
+# ya que CentOS 7 usa MariaDB por defecto y Longview todavía no es
+# compatible con MariaDB
 
-yum -y install mariadb-server mariadb
-systemctl enable mariadb.service
-systemctl start mariadb.service
+yum -y install http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+yum -y install mysql mysql-server
+systemctl enable mysqld.service
+systemctl start mysqld.service
 
-mysqladmin -u root password ',-/2~;I ~dN[!2b'
+# Seteo de Password maestro para mysql
 
-# Instalacion de phpMyAdmin
-
-yum -y install phpmyadmin
+mysqladmin -u root password '$mysql_root_password'
