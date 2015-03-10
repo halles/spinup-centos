@@ -8,4 +8,4 @@ rpm -ivh http://repo.webtatic.com/yum/el7/x86_64/RPMS/php55w-pecl-imagick-3.1.2-
 
 # Reiniciar php-fpm
 
-systemctl start php-fpm.service
+systemctl restart php-fpm.service

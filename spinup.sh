@@ -82,10 +82,24 @@ yum update
 
 ./scripts/nginx.sh
 
-# Instalacion de PHP con PHP-FPM
-
-./scripts/php-fpm.sh
-
 # Instalacion de MySQL
 
 ./scripts/mysql.sh $mysql_root_password
+
+# PHP con PHP-FPM y Módulos
+
+./scripts/php-fpm.sh
+./scripts/ImageMagick.sh
+
+# Node y Módulos
+
+./scripts/node.sh
+
+# Ruby y Módulos
+
+./scripts/ruby.sh
+
+# Composer
+
+./scripts/composer.sh
+
