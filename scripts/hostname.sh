@@ -7,3 +7,6 @@ server_ip=`ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -E
 echo -e "$server_ip \t $server_hostname.$cluster_hostname $server_hostname" >> /etc/hosts
 hostname $server_hostname.$cluster_hostname
 systemctl restart network.service
+
+## Refs
+# http://www.cyberciti.biz/faq/centos-hostname-change-command-line/

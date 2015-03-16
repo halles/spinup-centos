@@ -1,6 +1,6 @@
 # Spin Up - Centos 7
 
-Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters (Con Centos 6.4) que se utilizan en Wikot, además de herramientas de configuración para los servicios. Estos script son para utilización temporal y servirán como guía para desarrollar e implementar los Recipes para el proyecto de DevOps con Chef.
+Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters (Con Centos 7) que se utilizan en Wikot, además de herramientas de configuración para los servicios.
 
 El stack comprende:
 
@@ -9,32 +9,23 @@ El stack comprende:
 3. PHP 5.5 desde Webtatic corriendo a través de php-fpm
 4. MySQL Server 5.5
 5. phpMyAdmin
-6. Usuario de control ops
-7. Usuario de ejecución worker (root no tiene acceso al servidor)
+6. Usuario de control ops y root sin acceso por ssh
+7. ImageMagick y módulo para php.
+8. Composer
+9. Ruby + Gems + Sass
+10. Node + NPM
 
 ## To Do
 
 * Completar este Todo
 * Sacar copias de php-fpm.d para hacer template
-* Script y servicio para instalar Deploy Keys
 * Configuración básica de PHP-FPM para directorio base
-* Capacidad para que los scripts funcionen de manera independiente
-* Activar Sendmail para envio de mails con php mail()
-* node + npm
-* ruby + gems
-* sass
-* bower
-* gulp
-* composer
 
 ## Material de Apoyo
 
 ### Links
 
-* https://www.digitalocean.com/community/articles/initial-server-setup-with-centos-6
 * http://www.gratisoft.us/sudo/sudoers.man.html
-* http://www.cyberciti.biz/faq/centos-hostname-change-command-line/
-* http://ibohm.blogspot.com/2012/03/how-to-fix-warning-setlocale-lcctype.html (En comentarios la solucion)
 * http://serverfault.com/questions/149673/linux-how-to-prevent-a-user-from-login-in-but-allow-su-user
 * 403 en directorio
   * http://nginxlibrary.com/403-forbidden-error/
