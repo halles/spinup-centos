@@ -3,6 +3,12 @@
 yum -y upgrade
 yum update
 
+# Base Utils
+
+./scripts/network-tools.sh
+./scripts/wget.sh
+./scripts/nano.sh
+
 # Configuraciones Varias
 
 ./scripts/locale-fix.sh
