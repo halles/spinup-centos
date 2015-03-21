@@ -10,7 +10,7 @@ systemctl start nginx.service
 
 # Configuración por defecto para nginx
 
-cp config/nginx/nginx.conf /etc/nginx/nginx.conf
+cp config-production/nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Cloudflare para entregar IP real al servicio
 

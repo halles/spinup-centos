@@ -1,4 +1,11 @@
-# Spin Up - Centos 7
+# Spin Up - Centos 7 - Production Servers and Development Environment Box
+
+## Para inicializar
+
+* Servidor de producción, ejecutar ./spinup.sh
+* Creación de Ambiente de Desarrollo, ejecutar: ./spinup-wcde.sh
+
+## Scope
 
 Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters (Con Centos 7) que se utilizan en Wikot, además de herramientas de configuración para los servicios.
 

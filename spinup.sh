@@ -56,6 +56,7 @@ yum update
 
 ./scripts/locale-fix.sh
 ./scripts/hostname.sh $server_hostname $cluster_hostname
+./scripts/timezone-fix.sh
 
 # Repositorios externos
 
@@ -69,10 +70,8 @@ yum update
 
 # Configuracion de Usuarios
 
-./scripts/user.sh $ssh_username $ssh_password
-./scripts/deny-root-ssh.sh
-
-#./scripts/worker.sh
+./scripts-production/user.sh $ssh_username $ssh_password
+./scripts-production/deny-root-ssh.sh
 
 # Setup del Firewall
 
