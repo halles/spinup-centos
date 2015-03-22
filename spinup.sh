@@ -52,10 +52,16 @@ printf "** Comienza la Configuracion... Tomará un tiempo \n\n"
 yum -y upgrade
 yum update
 
+# Base Utils
+
+./scripts/network-tools.sh
+./scripts/wget.sh
+./scripts/nano.sh
+
 # Configuraciones Varias
 
 ./scripts/locale-fix.sh
-./scripts/hostname.sh $server_hostname $cluster_hostname
+./scripts-production/hostname.sh $server_hostname $cluster_hostname
 ./scripts/timezone-fix.sh
 
 # Repositorios externos

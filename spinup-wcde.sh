@@ -12,7 +12,7 @@ yum update
 # Configuraciones Varias
 
 ./scripts/locale-fix.sh
-./scripts/hostname.sh wcde wktapp.com
+./scripts-dev/hostname.sh wcde wktapp.com
 ./scripts/timezone-fix.sh
 
 # Repositorios externos
