@@ -94,6 +94,7 @@ yum update
 # PHP con PHP-FPM y Módulos
 
 ./scripts/php-fpm.sh
+./scripts-production/php-fpm.sh
 ./scripts/ImageMagick.sh
 
 # Node y Módulos

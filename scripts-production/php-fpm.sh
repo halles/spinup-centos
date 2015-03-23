@@ -1,0 +1,1 @@
+systemctl start php-fpm.service
