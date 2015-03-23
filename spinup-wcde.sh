@@ -8,6 +8,8 @@ yum update
 ./scripts/network-tools.sh
 ./scripts/wget.sh
 ./scripts/nano.sh
+./scripts/bzip2.sh
+./scripts/tree.sh
 
 # Configuraciones Varias
 
