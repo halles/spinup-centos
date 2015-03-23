@@ -62,6 +62,7 @@ yum update
 
 ./scripts-dev/SElinux.sh 
 ./scripts-dev/vbox-insecure-keys.sh
+./scripts-dev/vbox-additions.sh
 
 # Clean Up
 
