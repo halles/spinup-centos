@@ -10,6 +10,7 @@ Para re-crear el ambiente de desarrollo, se necesita primero crear una instalaci
 * La configuración de las particiones de disco puede dejarse en automático.
 * Idealmente el idioma del SO deberá ser inglés.
 * Desde la configuración de la interface de red de la máquina virtual en Virtualbox, redireccionar el puerto 22 de la máquina guest hacia el 2222 de la máquina host.
+* Instalar el sistema operativo normalmente y luego reiniciar la máquina.
 
 ## Scripts de Inicialización
 
