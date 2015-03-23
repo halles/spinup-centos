@@ -11,6 +11,7 @@ yum update
 
 # Configuraciones Varias
 
+./scripts-dev/vagrant-sshd.sh
 ./scripts/locale-fix.sh
 ./scripts-dev/hostname.sh wcde wktapp.com
 ./scripts/timezone-fix.sh
@@ -58,3 +59,11 @@ yum update
 
 ./scripts-dev/SElinux.sh 
 ./scripts-dev/vbox-insecure-keys.sh
+
+# Clean Up
+
+./scripts-dev/cleanup.sh
+
+# Shutdown
+
+shutdown -h now
