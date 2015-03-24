@@ -8,6 +8,10 @@ yum -y install nginx
 systemctl enable nginx.service
 systemctl stop nginx.service
 
+# Añadimos nginx al grupo apache para mantener compatibilidades con configuraciones por defecto del SO
+
+gpasswd -a nginx apache
+
 # Configuración por defecto para nginx
 
 cp config-dev/nginx/nginx.conf /etc/nginx/nginx.conf

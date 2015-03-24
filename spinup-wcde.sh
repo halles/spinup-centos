@@ -43,6 +43,7 @@ yum update
 # PHP con PHP-FPM y Módulos
 
 ./scripts/php-fpm.sh
+./scripts/phpmyadmin.sh
 ./scripts-dev/php-fpm.sh
 ./scripts/ImageMagick.sh
 
