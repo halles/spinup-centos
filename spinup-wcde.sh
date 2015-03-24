@@ -1,7 +1,7 @@
 #!/bin/bash
 
-yum -y upgrade
 yum update
+yum -y upgrade
 
 # Base Utils
 
@@ -44,6 +44,7 @@ yum update
 
 ./scripts/php-fpm.sh
 ./scripts/phpmyadmin.sh
+./scripts-dev/phpmyadmin.sh
 ./scripts-dev/php-fpm.sh
 ./scripts/ImageMagick.sh
 

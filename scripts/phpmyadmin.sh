@@ -1,3 +1,3 @@
 # Instalacion de phpMyAdmin
 
-yum -y install phpmyadmin
+# yum -y install phpmyadmin

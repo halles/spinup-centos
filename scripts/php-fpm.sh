@@ -23,3 +23,7 @@ yum -y install \
 # Registro de PHP-FPM como servicio
 
 systemctl enable php-fpm.service
+
+# Añadimos nginx al grupo apache para mantener compatibilidades con configuraciones por defecto del SO
+
+gpasswd -a nginx apache
