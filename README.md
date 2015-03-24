@@ -14,19 +14,20 @@ El stack comprende:
 1. Utilización de Centos 7
 2. Nginx 1.6.2
 3. PHP 5.5 desde Webtatic corriendo a través de php-fpm
-4. MySQL Server 5.5
+4. MySQL Server 5.6
 5. phpMyAdmin
 6. Usuario de control ops y root sin acceso por ssh
 7. ImageMagick y módulo para php.
 8. Composer
 9. Ruby + Gems + Sass
-10. Node + NPM
+10. Node + NPM + forever
 
 ## To Do
 
 * Completar este Todo
 * Sacar copias de php-fpm.d para hacer template
-* Configuración básica de PHP-FPM para directorio base
+* Scripts para administración: creacion de usuarios, DBs y accesos para administración por proyecto
+* Conversión de estructura a deployment con Docker en lugar de la estructura actual
 
 ## Material de Apoyo
 
