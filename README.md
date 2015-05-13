@@ -29,7 +29,7 @@ El stack comprende:
 * Scripts para administración: creacion de usuarios, DBs y accesos para administración por proyecto
 * Conversión de estructura a deployment con Docker en lugar de la estructura actual
 
-## Inicialización
+## Scripts de Inicialización
 
 * Ingresar con root al servidor recién creado
 * Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://gist.githubusercontent.com/halles/b013419b96be7ed5ff52/raw/57b6d638b33b679ded4d40c9b7d82972b3d4aaa2/start-spinup-prod.sh)```
