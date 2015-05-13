@@ -114,11 +114,11 @@ yum update
 
 # Otras configuraciones
 
-./scripts-dev/SElinux.sh
+./scripts-production/SElinux.sh
 
 # Clean Up
 
-./scripts-dev/cleanup.sh
+./scripts-production/cleanup.sh
 
 # Shutdown
 
