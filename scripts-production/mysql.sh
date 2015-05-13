@@ -13,4 +13,4 @@ systemctl start mysqld.service
 
 # Seteo de Password maestro para mysql
 
-mysqladmin -u root password "'$mysql_root_password'"
+mysqladmin -u root password "$mysql_root_password"
