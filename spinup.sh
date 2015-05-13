@@ -85,11 +85,11 @@ yum update
 
 # Instalacion de nginx
 
-./scripts/nginx.sh
+./scripts-production/nginx.sh
 
 # Instalacion de MySQL
 
-./scripts/mysql.sh $mysql_root_password
+./scripts-production/mysql.sh $mysql_root_password
 
 # PHP con PHP-FPM y Módulos
 
@@ -109,3 +109,14 @@ yum update
 
 ./scripts/composer.sh
 
+# Otras configuraciones
+
+./scripts-dev/SElinux.sh
+
+# Clean Up
+
+./scripts-dev/cleanup.sh
+
+# Shutdown
+
+shutdown -h now
