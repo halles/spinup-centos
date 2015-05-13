@@ -26,7 +26,7 @@ El stack comprende:
 
 * Completar este Todo
 * Sacar copias de php-fpm.d para hacer template
-* Scripts para administración: creacion de usuarios, DBs y accesos para administración por proyecto
+* Scripts para administración: creacion de usuarios, DBs y accesos para administración por proyecto (http://www.cyberciti.biz/faq/howto-linux-add-user-to-group/)
 * Conversión de estructura a deployment con Docker en lugar de la estructura actual
 
 ## Scripts de Inicialización
