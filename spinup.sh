@@ -50,7 +50,7 @@ printf "\n"
 printf "** Comienza la Configuracion... Tomará un tiempo \n\n"
 
 yum -y upgrade
-yum update
+yum -y update
 
 # Base Utils
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-yum update
 yum -y upgrade
+yum -y update
 
 # Base Utils
 
