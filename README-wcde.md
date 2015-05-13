@@ -17,4 +17,4 @@ Para re-crear el ambiente de desarrollo, se necesita primero crear una instalaci
 * Desde la interface de la máquina virtual, insertar el CD de Guest Additions: Menú Devices » Insert Guest Additions CD Image
 * Ingresar a la máquina virtual ejecutando ```ssh -p2222 vagrant@localhost```
 * Utilizar ```sudo su -``` para ingresar como root al sistema
-* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://gist.githubusercontent.com/halles/b013419b96be7ed5ff52/raw/07e2dd7c833ee3d2907636f3258863408620efc3/start-spinup-wcde.sh)```
+* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://gist.githubusercontent.com/halles/0f0d6a67433025f4aad5/raw/07e2dd7c833ee3d2907636f3258863408620efc3/start-spinup-wcde.sh)```
