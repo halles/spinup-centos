@@ -29,6 +29,19 @@ yum -y update
 ./scripts/git.sh
 ./scripts/htop.sh
 
+# Node y Módulos
+
+./scripts/node.sh
+
+# Ruby y Módulos
+
+./scripts/ruby.sh
+
+# Composer
+
+./scripts/composer.sh
+
+
 # Setup del Firewall
 
 ./scripts-dev/firewall.sh
@@ -41,6 +54,10 @@ yum -y update
 
 ./scripts-dev/mysql.sh
 
+# Instalacion de MongoDB
+
+./scripts-dev/mongodb.sh
+
 # PHP con PHP-FPM y Módulos
 
 ./scripts/php-fpm.sh
@@ -49,17 +66,9 @@ yum -y update
 ./scripts-dev/php-fpm.sh
 ./scripts/ImageMagick.sh
 
-# Node y Módulos
+# Mongo Express
 
-./scripts/node.sh
-
-# Ruby y Módulos
-
-./scripts/ruby.sh
-
-# Composer
-
-./scripts/composer.sh
+./scripts-dev/mongoexpress.sh
 
 # Otras configuraciones
 
