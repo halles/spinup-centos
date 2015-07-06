@@ -37,11 +37,6 @@ yum -y update
 
 ./scripts/ruby.sh
 
-# Composer
-
-./scripts/composer.sh
-
-
 # Setup del Firewall
 
 ./scripts-dev/firewall.sh
@@ -65,6 +60,7 @@ yum -y update
 ./scripts-dev/phpmyadmin.sh
 ./scripts-dev/php-fpm.sh
 ./scripts/ImageMagick.sh
+./scripts/composer.sh
 
 # Mongo Express
 
