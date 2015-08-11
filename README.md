@@ -33,12 +33,12 @@ El stack comprende:
 ## Inicialización Servidor Web
 
 * Ingresar con root al servidor recién creado
-* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://gist.githubusercontent.com/halles/0f0d6a67433025f4aad5/raw/29ccfbe3371ec6abee7fae7d321cfdd68a2c9fe3/start-spinup-production.sh)```
+* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://raw.githubusercontent.com/halles/spinup-centos/master/start-spinup-workers.sh)```
 
 ## Inicialización Servidor Bases de Datos
 
 * Ingresar con root al servidor recién creado
-* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://gist.githubusercontent.com/halles/0f0d6a67433025f4aad5/raw/29ccfbe3371ec6abee7fae7d321cfdd68a2c9fe3/start-spinup-production.sh)```
+* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://raw.githubusercontent.com/halles/spinup-centos/master/start-spinup-db.sh)```
 
 ## Material de Apoyo
 
