@@ -60,6 +60,7 @@ yum -y update
 ./scripts/nano.sh
 ./scripts/bzip2.sh
 ./scripts/tree.sh
+./scripts/ntp.sh
 
 # Configuraciones Varias
 
