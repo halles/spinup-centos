@@ -29,6 +29,14 @@ yum -y update
 ./scripts/git.sh
 ./scripts/htop.sh
 
+# Node y Módulos
+
+./scripts/node.sh
+
+# Ruby y Módulos
+
+./scripts/ruby.sh
+
 # Setup del Firewall
 
 ./scripts-dev/firewall.sh
@@ -41,29 +49,40 @@ yum -y update
 
 ./scripts-dev/mysql.sh
 
+# Instalacion de MongoDB
+
+./scripts/mongodb.sh
+
 # PHP con PHP-FPM y Módulos
 
 ./scripts/php-fpm.sh
-./scripts/phpmyadmin.sh
-./scripts-dev/phpmyadmin.sh
 ./scripts-dev/php-fpm.sh
 ./scripts/ImageMagick.sh
-
-# Node y Módulos
-
-./scripts/node.sh
-
-# Ruby y Módulos
-
-./scripts/ruby.sh
-
-# Composer
-
 ./scripts/composer.sh
+
+# PHPMyAdmin
+
+./scripts-dev/phpmyadmin.sh
+
+# Mongo PHP Driver
+
+./scripts/mongo-php.sh
+
+# Mongo Node Driver
+
+./scripts/mongo-node.sh
+
+# Mongo Express
+
+./scripts-dev/mongo-express.sh
+
+# NFS Support
+
+./scripts-dev/nfs-support.sh
 
 # Otras configuraciones
 
-./scripts-dev/SElinux.sh 
+./scripts-dev/SElinux.sh
 ./scripts-dev/vbox-insecure-keys.sh
 ./scripts-dev/vbox-additions.sh
 
