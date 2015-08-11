@@ -13,12 +13,6 @@ read -p "Cluster (cl.wktapp.com): " cluster_hostname
 
 printf "\n"
 
-printf "== Parametros de Configuracion para MySQL\n\n"
-
-read -p "Password de root: " mysql_root_password
-
-printf "\n"
-
 printf "== Parámetros de Usuario de Control\n\n"
 read -p "username:   " ssh_username
 read -p "password:   " ssh_password
@@ -30,8 +24,6 @@ printf "**         Confirmar la configuración         **\n"
 printf "\n"
 printf "Hostname: $server_hostname\n"
 printf "Cluster:  $cluster_hostname\n"
-printf "\n"
-printf "MySQL Root Password: $mysql_root_password\n"
 printf "\n"
 printf "SSH Username: $ssh_username\n"
 printf "SSH Password: $ssh_password\n"
@@ -85,15 +77,11 @@ yum -y update
 
 # Setup del Firewall
 
-./scripts-production/firewall.sh
+./scripts-production/firewall-workers.sh
 
 # Instalacion de nginx
 
 ./scripts-production/nginx.sh
-
-# Instalacion de MySQL
-
-./scripts-production/mysql.sh $mysql_root_password
 
 # PHP con PHP-FPM y Módulos
 
