@@ -85,7 +85,7 @@ yum -y update
 
 # Setup del Firewall
 
-./scripts/firewall.sh
+./scripts-production/firewall.sh
 
 # Instalacion de nginx
 

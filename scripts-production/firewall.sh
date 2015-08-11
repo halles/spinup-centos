@@ -13,4 +13,6 @@ firewall-cmd --reload
 for ip in $CF_IPS; do firewall-cmd --permanent --zone=public --add-rich-rule="rule family='ipv4' source address='$ip' service name='http' accept"; done
 for ip in $CF_IPS; do firewall-cmd --permanent --zone=public --add-rich-rule="rule family='ipv4' source address='$ip' service name='https' accept"; done
 
+firewall-cmd --zone=public --permanent --add-port=9001-9999/tcp
+
 firewall-cmd --reload
