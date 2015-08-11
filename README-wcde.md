@@ -43,3 +43,5 @@ Una vez publicada, podemos subir la máquina en el atlas de hashicorp y utilizar
 
 * Buscar la forma de mantener persistencia de los directorios de datos MySQL y MongoDB tras la publicación y actualización de las máquinas de desarrollo
 * Realizar una suite de tests para ver que todo quedó instalado correctamente e informe al usuario de posibles errores.
+* Ejecutar los scripts de instalación a través del provisionamiento de vagrant o con packer o directamente convertir a ansible.
+* Crear scripts de actualización. Ansible?
