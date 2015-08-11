@@ -38,3 +38,8 @@ Esto exportará la máquina virtual, la guardará dentro del directorio ./build 
 # Publicación
 
 Una vez publicada, podemos subir la máquina en el atlas de hashicorp y utilizarla normalmente.
+
+# To Do
+
+* Buscar la forma de mantener persistencia de los directorios de datos MySQL y MongoDB tras la publicación y actualización de las máquinas de desarrollo
+* Realizar una suite de tests para ver que todo quedó instalado correctamente e informe al usuario de posibles errores.
