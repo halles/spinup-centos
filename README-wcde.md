@@ -32,7 +32,7 @@ Para realizar las pruebas correspondientes es necesario empaquetar la máquina v
 
 $ ./spinup-wcde-build.sh Centos7SpinupDev 0.0.10
 
-Esto exportará la máquina virtual, la guardará dentro del directorio ./build y la instalará en vagrant bajo el nombre wcde-dev. Con esto podemos modificar el Vagrantfile en nuestro ambiente de desarrollo para utilizar la máquina en cuestión.
+Esto exportará la máquina virtual, la guardará dentro del directorio ./build y la instalará en vagrant bajo el nombre wcde-dev, reemplazando versiones anteriores. Con esto podemos modificar el Vagrantfile en nuestro ambiente de desarrollo para utilizar la máquina en cuestión según indica el readme.
 
 
 # Publicación
