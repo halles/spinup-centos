@@ -14,13 +14,14 @@ Para re-crear el ambiente de desarrollo, se necesita primero crear una instalaci
 
 ## Scripts de Inicialización
 
-Será necesario primero realizar una copia de estos archivos para poder ejecutarlos como root. Lo primero que tenemos que hacer es instalar rsync en la máquina, luego copiar los archivo y así poder ejecutar la instalación del software. Las consolas estarán identificadas por ```host$``` y ```guest$``` respectivamente:
+Será necesario primero realizar una copia de estos archivos para poder ejecutarlos como root. Lo primero que tenemos que hacer es instalar rsync en la máquina, luego copiar los archivo y así poder ejecutar la instalación del software. Acá debemos reemplazar el puerto de conexión via ssh según cómo hayamos configurado la redirección de puertos de virtualbox. Las consolas estarán identificadas por ```host$``` y ```guest$``` respectivamente:
 
 ```
-host$ ssh -p2224 root@localhost
+host$ ssh -p2222 root@localhost
 guest$ sudo yum -y install rsync
+guest$ exit
 host$ rsync -avz -e "ssh -p2224" --exclude-from '.rsync-exclude' ./ root@localhost:~/spinup/
-host$ ssh -p2224 root@localhost
+host$ ssh -p2222 root@localhost
 guest$ cd ~/spinup/
 guest$ ./spinup-wcde.sh
 ```
