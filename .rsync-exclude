@@ -1,0 +1,4 @@
+.git*
+.vagrant*
+build/*
+.DS_Store

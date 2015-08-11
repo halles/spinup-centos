@@ -9,12 +9,31 @@ Para re-crear el ambiente de desarrollo, se necesita primero crear una instalaci
 * Se debe activar una interface de red por defecto.
 * La configuración de las particiones de disco puede dejarse en automático.
 * Idealmente el idioma del SO deberá ser inglés.
-* Desde la configuración de la interface de red de la máquina virtual en Virtualbox, redireccionar el puerto 22 de la máquina guest hacia el 2222 de la máquina host.
+* Desde la configuración de la interface de red de la máquina virtual en Virtualbox, redireccionar el puerto 22 de la máquina guest hacia el 2222 de la máquina host. **Este puerto se utilizará para continuar con la instalalación más adelante**
 * Instalar el sistema operativo normalmente y luego reiniciar la máquina.
 
 ## Scripts de Inicialización
 
-* Desde la interface de la máquina virtual, insertar el CD de Guest Additions: Menú Devices » Insert Guest Additions CD Image
-* Ingresar a la máquina virtual ejecutando ```ssh -p2222 vagrant@localhost```
-* Utilizar ```sudo su -``` para ingresar como root al sistema
-* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://gist.githubusercontent.com/halles/0f0d6a67433025f4aad5/raw/07e2dd7c833ee3d2907636f3258863408620efc3/start-spinup-wcde.sh)```
+Será necesario primero realizar una copia de estos archivos para poder ejecutarlos como root. Lo primero que tenemos que hacer es instalar rsync en la máquina, luego copiar los archivo y así poder ejecutar la instalación del software. Las consolas estarán identificadas por ```host$``` y ```guest$``` respectivamente:
+
+```
+host$ ssh -p2224 root@localhost
+guest$ sudo yum -y install rsync
+host$ rsync -avz -e "ssh -p2224" --exclude-from '.rsync-exclude' ./ root@localhost:~/spinup/
+host$ ssh -p2224 root@localhost
+guest$ cd ~/spinup/
+guest$ ./spinup-wcde.sh
+```
+
+## Empaquetación y Pruebas
+
+Para realizar las pruebas correspondientes es necesario empaquetar la máquina virtual, e instalarla como la máquina que utilizará el proyecto de WCDE (http://code.wktapp.com/devops/wikot-centos-development-environment). Debemos conocer cómo se llama la máquina virtual en virtualbox (en nuestro caso Centos7SpinupDev) y la versión para insertar en el nombre al exportarla (0.0.10)
+
+$ ./spinup-wcde-build.sh Centos7SpinupDev 0.0.10
+
+Esto exportará la máquina virtual, la guardará dentro del directorio ./build y la instalará en vagrant bajo el nombre wcde-dev. Con esto podemos modificar el Vagrantfile en nuestro ambiente de desarrollo para utilizar la máquina en cuestión.
+
+
+# Publicación
+
+Una vez publicada, podemos subir la máquina en el atlas de hashicorp y utilizarla normalmente.

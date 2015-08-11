@@ -51,24 +51,38 @@ yum -y update
 
 # Instalacion de MongoDB
 
-./scripts-dev/mongodb.sh
+./scripts/mongodb.sh
 
 # PHP con PHP-FPM y Módulos
 
 ./scripts/php-fpm.sh
-./scripts/phpmyadmin.sh
-./scripts-dev/phpmyadmin.sh
 ./scripts-dev/php-fpm.sh
 ./scripts/ImageMagick.sh
 ./scripts/composer.sh
 
+# PHPMyAdmin
+
+./scripts-dev/phpmyadmin.sh
+
+# Mongo PHP Driver
+
+./scripts/mongo-php.sh
+
+# Mongo Node Driver
+
+./scripts/mongo-node.sh
+
 # Mongo Express
 
-./scripts-dev/mongoexpress.sh
+./scripts-dev/mongo-express.sh
+
+# NFS Support
+
+./scripts-dev/nfs-support.sh
 
 # Otras configuraciones
 
-./scripts-dev/SElinux.sh 
+./scripts-dev/SElinux.sh
 ./scripts-dev/vbox-insecure-keys.sh
 ./scripts-dev/vbox-additions.sh
 
