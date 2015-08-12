@@ -1,26 +1,36 @@
 # Spin Up - Centos 7 - Production Servers and Development Environment Box
 
-## Para inicializar
-
-* Servidor de producción, ejecutar ./spinup.sh
-* Creación de Ambiente de Desarrollo, ejecutar: ./spinup-wcde.sh
-
-## Scope
-
 Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters (Con Centos 7) que se utilizan en Wikot, además de herramientas de configuración para los servicios.
 
 El stack comprende:
 
-1. Utilización de Centos 7
+1. SO Centos 7
 2. Nginx 1.6.2
 3. PHP 5.5 desde Webtatic corriendo a través de php-fpm
 4. MySQL Server 5.6
 5. phpMyAdmin
-6. Usuario de control ops y root sin acceso por ssh
-7. ImageMagick y módulo para php.
-8. Composer
-9. Ruby + Gems + Sass
-10. Node + NPM + forever
+6. Usuario de control con sudo
+7. Negación de acceso remoto a root
+8. ImageMagick y módulo para php.
+9. Composer
+10. Ruby + Gems + Sass
+11. Node + NPM + forever
+
+## Inicialización
+
+* Servidor de producción web + php-fpm + node + ruby: ./spinup-workers.sh
+* Servidor de producción DB MySQL + MongoDB: ./spinup-db.sh
+* Creación de ambiente de desarrollo: ./spinup-wcde.sh
+
+### Inicialización Online Web
+
+* Ingresar con root al servidor recién creado
+* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://raw.githubusercontent.com/halles/spinup-centos/master/start-spinup-workers.sh)```
+
+### Inicialización Online Datos
+
+* Ingresar con root al servidor recién creado
+* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://raw.githubusercontent.com/halles/spinup-centos/master/start-spinup-db.sh)```
 
 ## To Do
 
@@ -29,16 +39,6 @@ El stack comprende:
 * Scripts para administración: creacion de usuarios, DBs y accesos para administración por proyecto (http://www.cyberciti.biz/faq/howto-linux-add-user-to-group/)
 * Conversión de estructura a deployment con Docker en lugar de la estructura actual
 * Automatizar y ejecutar periódicamente modificación de firewall. El firewall de base de datos está sin reglas.
-
-## Inicialización Servidor Web
-
-* Ingresar con root al servidor recién creado
-* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://raw.githubusercontent.com/halles/spinup-centos/master/start-spinup-workers.sh)```
-
-## Inicialización Servidor Bases de Datos
-
-* Ingresar con root al servidor recién creado
-* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://raw.githubusercontent.com/halles/spinup-centos/master/start-spinup-db.sh)```
 
 ## Material de Apoyo
 
