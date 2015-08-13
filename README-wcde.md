@@ -18,9 +18,9 @@ Será necesario primero realizar una copia de estos archivos para poder ejecutar
 
 ```
 host$ ssh -p2222 root@localhost
-guest$ sudo yum -y install rsync
+guest$ yum -y install rsync
 guest$ exit
-host$ rsync -avz -e "ssh -p2224" --exclude-from '.rsync-exclude' ./ root@localhost:~/spinup/
+host$ rsync -avz -e "ssh -p2222" --exclude-from '.rsync-exclude' ./ root@localhost:~/spinup/
 host$ ssh -p2222 root@localhost
 guest$ cd ~/spinup/
 guest$ ./spinup-wcde.sh
