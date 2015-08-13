@@ -1,26 +1,26 @@
 # Spin Up - Centos 7 - Production Servers and Development Environment Box
 
-Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters (Con Centos 7) que se utilizan en Wikot, además de herramientas de configuración para los servicios.
-
-El stack comprende:
+Este conjunto de scripts permiten la rápida inicialización de un servidor típico de los Clusters (Con Centos 7) que se utilizan en Wikot, además de herramientas de configuración para los servicios. Los componentes principales son:
 
 1. SO Centos 7
-2. Nginx 1.6.2
-3. PHP 5.5 desde Webtatic corriendo a través de php-fpm
-4. MySQL Server 5.6
-5. phpMyAdmin
-6. Usuario de control con sudo
-7. Negación de acceso remoto a root
-8. ImageMagick y módulo para php.
-9. Composer
-10. Ruby + Gems + Sass
-11. Node + NPM + forever
+2. Usuario de control con sudo
+3. Bloqueo de acceso remoto a root
+4. Nginx 1.8
+3. MySQL Server 5.6 + phpMyAdmin (dev)
+4. Mongo DB 3.0 + mongo-express (Dev)
+5. PHP 5.5 + php-fpm + composer + imagemagick
+6. Ruby 2.0 + Gems + Sass
+7. Node 0.10.36 + NPM + forever + yeoman
 
-## Inicialización
+# Ambiente de Desarrollo
+
+La imagen para ambiente de desarrollo creada con este repositorio es para uso con Vagrant y Virtualbox. Crea una serie de configuraciones que permiten cargar configuraciones de nginx y php, y escribir logs de nginx y php, en un directorio compartido con el host. Esto hará que la imagen no funcione si es que no tiene la estructura de directorios accesible. Para utilizar el ambiente de desarrollo o crear nuevas versiones, utilizar el proyecto https://github.com/halles/wikot-centos-development-environment. La imágen oficial de este repositorio se encuentra en https://atlas.hashicorp.com/halles/boxes/wcde
+
+## Scripts de Instalacuón
 
 * Servidor de producción web + php-fpm + node + ruby: ./spinup-workers.sh
 * Servidor de producción DB MySQL + MongoDB: ./spinup-db.sh
-* Creación de ambiente de desarrollo: ./spinup-wcde.sh
+* Ambiente de desarrollo: ./spinup-wcde.sh
 
 ### Inicialización Online Web
 
