@@ -11,6 +11,7 @@ systemctl stop nginx.service
 # Configuración por defecto para nginx
 
 cp config-dev/nginx/nginx.conf /etc/nginx/nginx.conf
+sudo rm /etc/nginx/conf.d/default.conf
 
 # Creación de Certificados Self signed para nginx
 
