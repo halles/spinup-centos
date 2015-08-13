@@ -17,3 +17,9 @@ npm install -g forever
 
 npm install -g bower
 npm install -g gulp
+
+##
+# Yeoman
+##
+
+npm install -g yo
