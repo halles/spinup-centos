@@ -1,6 +1,7 @@
 cd ~
-curl -o spinup.tar.gz https://github.com/halles/wikot-centos-development-environment/archive/master.tar.gz
+curl -o spinup.tar.gz https://codeload.github.com/halles/spinup-centos/tar.gz/master
 tar xfz spinup.tar.gz
 rm spinup.tar.gz
-cd spinup-centos.git
+mv spinup-centos-master spinup-centos
+cd spinup-centos
 ./spinup-workers.sh
