@@ -18,7 +18,7 @@ read -p "username:   " ssh_username
 read -p "password:   " ssh_password
 
 while true; do
-    read -p "¿Usarás nGinx?" yn
+    read -p "¿Usarás Nginx? [S o N] " yn
     case $yn in
         [Ss]* )
           with_nginx=1
@@ -31,10 +31,10 @@ while true; do
     esac
 done
 
-if [ "$with_nginx" = 1]; then
+if [ "$with_nginx" = 1 ]; then
 
   while true; do
-      read -p "¿El servidor http(s) está protegido por cloudflare?" yn
+      read -p "¿El servidor http(s) está protegido por cloudflare? [S o N] " yn
       case $yn in
           [Ss]* )
             with_cloudflare=1
@@ -49,12 +49,12 @@ if [ "$with_nginx" = 1]; then
 
 else
 
-  with_cloudflare = 0
+  with_cloudflare=0
 
 fi
 
 while true; do
-    read -p "¿Usarás NodeJS (sockets) en los puertos 9000+?" yn
+    read -p "¿Usarás NodeJS (sockets) en los puertos 9000+? [S o N] " yn
     case $yn in
         [Ss]* )
           with_sockets=1
@@ -68,7 +68,7 @@ while true; do
 done
 
 while true; do
-    read -p "¿Usarás MySQL?" yn
+    read -p "¿Usarás MySQL? [S o N] " yn
     case $yn in
         [Ss]* )
           with_mysql=1
@@ -81,7 +81,7 @@ while true; do
     esac
 done
 
-if [ "$with_mysql" = 1]; then
+if [ "$with_mysql" = 1 ]; then
 
   read -p "Password usuario root mysql:   " mysql_root_password
 
@@ -157,11 +157,11 @@ yum -y update
 
 # Instalacion de MySQL
 
-if [ "$with_mysql" = 1]; then
+if [ "$with_mysql" = 1 ]; then
   ./scripts-production/mysql.sh $mysql_root_password
 fi
 
-if [ "$with_nginx" = 1]; then
+if [ "$with_nginx" = 1 ]; then
 
   # Instalacion de nginx
 
@@ -175,7 +175,7 @@ if [ "$with_nginx" = 1]; then
 
 fi
 
-if [ "$with_node" = 1]; then
+if [ "$with_node" = 1 ]; then
 
   # Node y Módulos
 
