@@ -18,7 +18,7 @@ cp config-production/nginx/nginx.conf /etc/nginx/nginx.conf
 CF_IPS_FILE='/etc/nginx/cloudflare_real_ip.conf'
 echo '' > $CF_IPS_FILE
 
-if [ "$with_cloudflare" = 1]; then
+if [ "$with_cloudflare" = 1 ]; then
 
 	# Cloudflare para entregar IP real al servicio
 
