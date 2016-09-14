@@ -16,7 +16,7 @@ Este conjunto de scripts permiten la rápida inicialización de un servidor típ
 
 La imagen para ambiente de desarrollo creada con este repositorio es para uso con Vagrant y Virtualbox. Crea una serie de configuraciones que permiten cargar configuraciones de nginx y php, y escribir logs de nginx y php, en un directorio compartido con el host. Esto hará que la imagen no funcione si es que no tiene la estructura de directorios accesible. Para utilizar el ambiente de desarrollo o crear nuevas versiones, utilizar el proyecto https://github.com/halles/wikot-centos-development-environment. La imágen oficial de este repositorio se encuentra en https://atlas.hashicorp.com/halles/boxes/wcde
 
-## Scripts de Instalacuón
+## Scripts de Instalación
 
 * Servidor de producción web + php-fpm + node + ruby: ./spinup-workers.sh
 * Servidor de producción DB MySQL + MongoDB: ./spinup-db.sh
@@ -31,6 +31,12 @@ La imagen para ambiente de desarrollo creada con este repositorio es para uso co
 
 * Ingresar con root al servidor recién creado
 * Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://raw.githubusercontent.com/halles/spinup-centos/master/start-spinup-db.sh)```
+
+### Inicialización con opciones (beta)
+
+* Ingresar con root al servidor recién creado
+* Descargar los scripts de inicializacion en la máquina virtual y ejecutar, utilizando ```bash <(curl -s https://raw.githubusercontent.com/halles/spinup-centos/master/start-spinup-options.sh)```
+
 
 ## To Do
 
@@ -57,4 +63,3 @@ La imagen para ambiente de desarrollo creada con este repositorio es para uso co
 
 * Para generar una llave con comentario, sin passphrase y archivo específico
 ```ssh-keygen -f cl.wktapp.com.deploykey -C "cluster@cl.wktapp.com" -N ""```
-

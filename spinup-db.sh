@@ -81,7 +81,7 @@ yum -y update
 
 # Instalacion de MySQL
 
-./scripts-production/mysql.sh $mysql_root_password
+./scripts-production/mysql.sh
 
 # Otras configuraciones
 
