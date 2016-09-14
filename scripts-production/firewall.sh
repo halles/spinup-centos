@@ -2,7 +2,7 @@ args=("$@")
 with_db=${args[0]}
 with_http=${args[1]}
 with_cloudflare=${args[2]}
-with_sockets=${args[3]}
+with_node=${args[3]}
 
 # Ensure SSH is open to go through firewall
 
@@ -33,7 +33,7 @@ if [ "$with_http" = 1 ] ; then
 
 fi
 
-if [ "$with_sockets" = 1 ] ; then
+if [ "$with_node" = 1 ] ; then
   firewall-cmd --zone=public --permanent --add-port=9001-9999/tcp
 fi
 

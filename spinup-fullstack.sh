@@ -57,11 +57,11 @@ while true; do
     read -p "¿Usarás NodeJS (sockets) en los puertos 9000+? [S o N] " yn
     case $yn in
         [Ss]* )
-          with_sockets=1
+          with_node=1
           break
           ;;
         [Nn]* )
-          with_sockets=0
+          with_node=0
           break
           ;;
     esac
@@ -153,7 +153,7 @@ yum -y update
 
 # Setup del Firewall
 
-./scripts-production/firewall.ssh $with_mysql $with_nginx $with_cloudflare $with_sockets
+./scripts-production/firewall.ssh $with_mysql $with_nginx $with_cloudflare $with_node
 
 # Instalacion de MySQL
 
