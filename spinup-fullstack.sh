@@ -102,7 +102,7 @@ printf "Nginx:      $with_nginx\n"
 printf "Cloudflare: $with_cloudflare\n"
 printf "Node:       $with_node\n"
 printf "MySQL:      $with_mysql\n"
-printf "MySQL pass: $mysql_password\n"
+printf "MySQL pass: $mysql_root_password\n"
 
 
 while true; do
