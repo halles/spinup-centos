@@ -201,4 +201,4 @@ fi
 
 # Shutdown
 
-shutdown -h now
+reboot -h now
