@@ -17,9 +17,11 @@ printf "== Parámetros de Usuario de Control\n\n"
 read -p "username:   " ssh_username
 read -p "password:   " ssh_password
 
-printf "== Crear Swapfile"
+printf "\n\n"
+
+printf "== Crear Swapfile\n\n"
 while true; do
-    read -p "¿Usarás un Swapfile? Selecciona el tamaño en GB (1,2,3,4) o 0 si no deseas usar swap" swapsizeyn
+    read -p "¿Usarás un Swapfile? Selecciona el tamaño en GB (1,2,3,4) o 0 si no deseas usar swap: " swapsizeyn
     case $swapsizeyn in
         [1]* )
           swap_size=1
