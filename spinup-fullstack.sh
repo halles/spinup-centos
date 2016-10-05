@@ -17,6 +17,33 @@ printf "== Parámetros de Usuario de Control\n\n"
 read -p "username:   " ssh_username
 read -p "password:   " ssh_password
 
+printf "== Crear Swapfile"
+while true; do
+    read -p "¿Usarás un Swapfile? Selecciona el tamaño en GB (1,2,3,4) o 0 si no deseas usar swap" swapsizeyn
+    case $swapsizeyn in
+        [1]* )
+          swap_size=1
+          break
+          ;;
+        [2]* )
+          swap_size=2
+          break
+          ;;
+        [3]* )
+          swap_size=3
+          break
+          ;;
+        [4]* )
+          swap_size=4
+          break
+          ;;
+        [0]* )
+          swap_size=0
+          break
+          ;;
+    esac
+done
+
 while true; do
     read -p "¿Usarás Nginx? [S o N] " yn
     case $yn in
@@ -129,6 +156,11 @@ yum -y update
 ./scripts/bzip2.sh
 ./scripts/tree.sh
 ./scripts/ntp.sh
+
+# Swapfile
+if [ "$swap_size" > 0 ]; then
+  ./scripts-production/swap.sh $swap_size
+fi
 
 # Configuraciones Varias
 
